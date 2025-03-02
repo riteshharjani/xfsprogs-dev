@@ -17,6 +17,24 @@ pwritev2(0, 0, 0, 0, 0);
   ])
 
 #
+# Check if we have a preadv2 libc call (Linux)
+#
+AC_DEFUN([AC_HAVE_PREADV2],
+  [ AC_MSG_CHECKING([for preadv2])
+    AC_LINK_IFELSE(
+    [	AC_LANG_PROGRAM([[
+#define _GNU_SOURCE
+#include <sys/uio.h>
+	]], [[
+preadv2(0, 0, 0, 0, 0);
+	]])
+    ], have_preadv2=yes
+       AC_MSG_RESULT(yes),
+       AC_MSG_RESULT(no))
+    AC_SUBST(have_preadv2)
+  ])
+
+#
 # Check if we have a copy_file_range system call (Linux)
 #
 AC_DEFUN([AC_HAVE_COPY_FILE_RANGE],

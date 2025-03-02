@@ -94,6 +94,7 @@ ENABLE_SCRUB	= @enable_scrub@
 HAVE_ZIPPED_MANPAGES = @have_zipped_manpages@
 
 HAVE_PWRITEV2 = @have_pwritev2@
+HAVE_PREADV2 = @have_preadv2@
 HAVE_COPY_FILE_RANGE = @have_copy_file_range@
 NEED_INTERNAL_FSXATTR = @need_internal_fsxattr@
 NEED_INTERNAL_FSCRYPT_ADD_KEY_ARG = @need_internal_fscrypt_add_key_arg@

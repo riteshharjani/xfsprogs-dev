@@ -69,6 +69,10 @@ ifeq ($(HAVE_PWRITEV2),yes)
 LCFLAGS += -DHAVE_PWRITEV2
 endif
 
+ifeq ($(HAVE_PREADV2),yes)
+LCFLAGS += -DHAVE_PREADV2
+endif
+
 ifeq ($(HAVE_MAP_SYNC),yes)
 LCFLAGS += -DHAVE_MAP_SYNC
 endif
